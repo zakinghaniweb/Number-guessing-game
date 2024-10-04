@@ -197,9 +197,21 @@ body{
     0 0 15px #ff13ff;
     font-family: var(--font);
 }
+.text-style-input3{
+    color: #fff;
+    text-shadow:
+    0 0 5px #caff2c,
+    0 0 10px #caff2c,
+    0 0 15px #caff2c;
+    font-family: var(--font);
+}
 .playerTwo{
     display: none;
     border: 5px dashed #ff13ff;
+}
+.playerThree{
+    display: none;
+    border: 5px dashed #caff2c;
 }
 /* Winner Css Start */
 .winner1{
@@ -209,6 +221,12 @@ body{
     align-items: center;
 }
 .winner2{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.winner3{
     display: none;
     flex-direction: column;
     justify-content: center;

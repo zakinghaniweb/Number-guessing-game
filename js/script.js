@@ -16,9 +16,12 @@ let playerThreeInput    = document.querySelector('.playerThreeInput');
 let playerThreeButton   = document.querySelector('.playerThreeButton');
 // ====== Other Doms ======
 let chanceCount       = 1;
+let chanceCount2       = 1;
 let chanceleft        = document.querySelector('.chanceleft');
+let chanceleft2        = document.querySelector('.chanceleft2');
 let winner1           = document.querySelector('.winner1');
 let winner2           = document.querySelector('.winner2');
+let winner3           = document.querySelector('.winner3');
 // ======================== Doms End Here ========================
 
 // ==== Player One Code Start Here ====
@@ -50,9 +53,29 @@ function handleplayerTwo() {
             if (totalChance == 3) {
                 playerTwo.style.display = 'none';
                 playerThree.style.display = 'flex';
-                // errormsg2.innerHTML = '';
+                errormsg2.innerHTML = '';
+                errormsg3.innerHTML = 'Guess the number between 1 - 10';
                 // playerTwo.style.display = 'none';
                 // winner1.style.display = 'flex';
+            }
+        }
+    }
+}
+function handleplayerThree() {
+    if (playerThreeInput.value == "" || playerThreeInput.value < 1 || playerThreeInput.value > 10) {
+        errormsg3.style.color = 'red';
+    } else {
+        if (playerThreeInput.value == playerOneInput.value) {
+            errormsg3.innerHTML = '';
+            playerThree.style.display = 'none';
+            winner3.style.display = 'flex';
+        } else {
+            let chances2 = chanceCount2++;
+            let totalChance = chanceleft2.innerHTML = chances2;
+            if (totalChance == 3) {
+                errormsg3.innerHTML = '';
+                playerThree.style.display = 'none';
+                winner1.style.display = 'flex';
             }
         }
     }
@@ -62,6 +85,7 @@ function handleplayerTwo() {
 // ==== Global Event Listeners ====
 playerOneButton.addEventListener('click', handleplayerOne);
 playerTwoButton.addEventListener('click', handleplayerTwo);
+playerThreeButton.addEventListener('click', handleplayerThree);
 
 function player1HandleInput(item) {
     if (item.key == 'Enter') {
@@ -72,5 +96,11 @@ function player1HandleInput(item) {
 function player2HandleInput(item) {
     if (item.key == 'Enter') {
         handleplayerTwo();
+    }
+}
+
+function player3HandleInput(item) {
+    if (item.key == 'Enter') {
+        handleplayerThree();
     }
 }
