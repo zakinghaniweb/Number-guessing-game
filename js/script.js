@@ -50,6 +50,7 @@ function handleplayerTwo() {
         } else {
             let chances = chanceCount++;
             let totalChance = chanceleft.innerHTML = chances;
+            playerTwoInput.value = '';
             if (totalChance == 3) {
                 playerTwo.style.display = 'none';
                 playerThree.style.display = 'flex';
@@ -72,6 +73,7 @@ function handleplayerThree() {
         } else {
             let chances2 = chanceCount2++;
             let totalChance = chanceleft2.innerHTML = chances2;
+            playerThreeInput.value = '';
             if (totalChance == 3) {
                 errormsg3.innerHTML = '';
                 playerThree.style.display = 'none';
