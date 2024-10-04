@@ -27,9 +27,20 @@
         <h4 class="text-style2">Chances left: <span class="chanceleft">0</span>/3</h4>
     </div>
     <!-- Player Two End -->
+    <!-- Player Three Start -->
+    <div class="mainCard playerThree">
+        <h1 class="text-style3 player-name">Player 3</h1>
+        <div class="input-group-void3">
+            <input class="playerThreeInput text-style-input3" onkeydown="player3HandleInput(event)" type="number">
+            <button class="playerThreeButton" type="submit">Guess</button>
+        </div>
+        <h4 class="text-style2">Chances left: <span class="chanceleft">0</span>/3</h4>
+    </div>
+    <!-- Player Three End -->
     <!-- Errors Start -->
     <h2 class="text-style-input error1">You have to choose a number between 1 - 10</h2>
     <h2 class="text-style-input2 error2"></h2>
+    <h2 class="text-style-input3 error3"></h2>
     <!-- Errors End -->
     <!-- Winner Section Start -->
     <div class="winner1">
@@ -42,6 +53,12 @@
         <h1 class="win-text">Winner : Player 2</h1>
         <h2 class="text-style2">Player 2 was able to guess the number under 3 chances</h2>
     </div>
+    <div class="winner3">
+        <img style="width: 400px;" src="img/win.png" alt="win">
+        <h1 class="win-text">Winner : Player 3</h1>
+        <h2 class="text-style3">Player 3 was able to guess the number under 3 chances</h2>
+    </div>
+
     <!-- Winner Section End -->
     <!-- Game Html End -->
     <script src="js/script.js"></script>

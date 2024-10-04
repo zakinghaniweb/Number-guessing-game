@@ -9,6 +9,11 @@ let errormsg2           = document.querySelector('.error2');
 let playerTwo         = document.querySelector('.playerTwo');
 let playerTwoInput    = document.querySelector('.playerTwoInput');
 let playerTwoButton   = document.querySelector('.playerTwoButton');
+// ====== Player Three Doms ======
+let errormsg3           = document.querySelector('.error3');
+let playerThree         = document.querySelector('.playerThree');
+let playerThreeInput    = document.querySelector('.playerThreeInput');
+let playerThreeButton   = document.querySelector('.playerThreeButton');
 // ====== Other Doms ======
 let chanceCount       = 1;
 let chanceleft        = document.querySelector('.chanceleft');
@@ -43,9 +48,11 @@ function handleplayerTwo() {
             let chances = chanceCount++;
             let totalChance = chanceleft.innerHTML = chances;
             if (totalChance == 3) {
-                errormsg2.innerHTML = '';
                 playerTwo.style.display = 'none';
-                winner1.style.display = 'flex';
+                playerThree.style.display = 'flex';
+                // errormsg2.innerHTML = '';
+                // playerTwo.style.display = 'none';
+                // winner1.style.display = 'flex';
             }
         }
     }
