@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number guessing game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Game Html Start -->
+    <!-- Player One Start -->
+    <div class="mainCard playerOne">
+        <h1 class="text-style player-name">Player 1</h1>
+        <div class="input-group-void">
+            <input class="playerOneInput text-style-input" onkeydown="player1HandleInput(event)" type="number">
+            <button class="playerOneButton" type="submit">Set</button>
+        </div>
+    </div>
+    <!-- Player One End -->
+    <!-- Player Two Start -->
+    <div class="mainCard playerTwo">
+        <h1 class="text-style2 player-name">Player 2</h1>
+        <div class="input-group-void2">
+            <input class="playerTwoInput text-style-input2" onkeydown="player2HandleInput(event)" type="number">
+            <button class="playerTwoButton" type="submit">Guess</button>
+        </div>
+        <h4 class="text-style2">Chances left: <span class="chanceleft">0</span>/3</h4>
+    </div>
+    <!-- Player Two End -->
+    <!-- Errors Start -->
+    <h2 class="text-style-input error1">You have to choose a number between 1 - 10</h2>
+    <h2 class="text-style-input2 error2"></h2>
+    <!-- Errors End -->
+    <!-- Winner Section Start -->
+    <div class="winner1">
+        <img style="width: 400px;" src="img/win.png" alt="win">
+        <h1 class="win-text">Winner : Player 1</h1>
+        <h2 class="text-style">Player 2 was not able to guess the number</h2>
+    </div>
+    <div class="winner2">
+        <img style="width: 400px;" src="img/win.png" alt="win">
+        <h1 class="win-text">Winner : Player 2</h1>
+        <h2 class="text-style2">Player 2 was able to guess the number under 3 chances</h2>
+    </div>
+    <!-- Winner Section End -->
+    <!-- Game Html End -->
+    <script src="js/script.js"></script>
+</body>
+</html>
